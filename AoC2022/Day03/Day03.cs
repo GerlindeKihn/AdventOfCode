@@ -16,14 +16,7 @@ public class Day03 : IPuzzle
 
             char compartmentError = firstCompartment.Intersect(secondCompartment).Single();
 
-            if (compartmentError <= 'z' && compartmentError >= 'a')
-            {
-                sumOfPriorities += compartmentError - 'a' + 1; 
-            }
-            else if (compartmentError <= 'Z' && compartmentError >= 'A')
-            {
-                sumOfPriorities += compartmentError - 'A' + 27;
-            }
+            sumOfPriorities += Prioritize(compartmentError);
         }
         
         return sumOfPriorities;
@@ -31,6 +24,29 @@ public class Day03 : IPuzzle
 
     public int SolvePart2()
     {
-        throw new NotImplementedException();
+        int sumOfPriorities = 0;
+
+        foreach (string[] compartment in rucksackInputFile.Chunk(3))
+        {
+            char compartmentError = compartment[0].Intersect(compartment[1]).Intersect(compartment[2]).Single();
+
+            sumOfPriorities += Prioritize(compartmentError);
+        }
+
+        return sumOfPriorities;
+    }
+
+    private int Prioritize(char compartmentError)
+    {
+        if (compartmentError <= 'z' && compartmentError >= 'a')
+        {
+            return compartmentError - 'a' + 1;
+        }
+        if (compartmentError <= 'Z' && compartmentError >= 'A')
+        {
+            return compartmentError - 'A' + 27;
+        }
+        
+        throw new NotSupportedException("Oops, too many drunk elves!");
     }
 }
