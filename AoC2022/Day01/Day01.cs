@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace AoC2022.Day01;
 
-namespace AoC2022.Day01;
-
-internal class Day01
+internal class Day01 : IPuzzle
 {
     string[] caloriesInput = File.ReadAllLines("Day01/Input");
     List<int> caloriesPerElf = new List<int>();
