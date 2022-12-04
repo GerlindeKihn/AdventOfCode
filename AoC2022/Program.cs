@@ -2,10 +2,12 @@
 using AoC2022.Day01;
 using AoC2022.Day02;
 using AoC2022.Day03;
+using AoC2022.Day04;
 
 Solve<Day01>("Solve day 1");
 Solve<Day02>("Solve day 2");
 Solve<Day03>("Solve day 3");
+Solve<Day04>("Solve day 4");
 
 void Solve<TPuzzle>(string text) where TPuzzle : IPuzzle, new()
 {
