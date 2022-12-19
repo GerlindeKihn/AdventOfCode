@@ -7,11 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <None Update="Day*\Input">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Update="**\Day*\Input" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
