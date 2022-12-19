@@ -1,8 +1,10 @@
 ﻿using AoC2021;
 using AoC2021.Day01;
+using AoC2021.Day02;
 
 
-Solve<Day01>("Solve day 1");
+//Solve<Day01>("Solve day 1");
+Solve<Day02>("Solve day 2");
 
 
 void Solve<TPuzzle>(string text) where TPuzzle : IPuzzle, new()

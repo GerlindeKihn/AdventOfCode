@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Day02\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="**\Day*\Input" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
